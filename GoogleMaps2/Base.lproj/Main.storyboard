@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="QQN-zm-pVO">
+                                <rect key="frame" x="0.0" y="18" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Yo-4Q-8qc">
+                                <rect key="frame" x="153" y="634" width="206" height="29"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Hybrid"/>
+                                    <segment title="Satellite"/>
+                                </segments>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E03-Ro-K8a" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="62" width="375" height="564"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Yo-4Q-8qc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Atr-V3-7lP"/>
+                            <constraint firstAttribute="trailing" secondItem="QQN-zm-pVO" secondAttribute="trailing" id="IzG-Fp-Mkh"/>
+                            <constraint firstItem="E03-Ro-K8a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="McW-MA-uRW"/>
+                            <constraint firstItem="5Yo-4Q-8qc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="137" id="QBh-22-GmD"/>
+                            <constraint firstItem="QQN-zm-pVO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="18" id="dkN-JH-n7R"/>
+                            <constraint firstAttribute="trailing" secondItem="E03-Ro-K8a" secondAttribute="trailing" id="doG-iC-a9e"/>
+                            <constraint firstItem="QQN-zm-pVO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="g5l-jZ-S9X"/>
+                            <constraint firstItem="5Yo-4Q-8qc" firstAttribute="top" secondItem="E03-Ro-K8a" secondAttribute="bottom" constant="8" id="hYg-gA-wZL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5Yo-4Q-8qc" secondAttribute="bottom" constant="5" id="oQi-CW-Gmr"/>
+                            <constraint firstItem="E03-Ro-K8a" firstAttribute="top" secondItem="QQN-zm-pVO" secondAttribute="bottom" id="t16-CK-E0X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="E03-Ro-K8a" id="KLQ-PH-hoj"/>
+                        <outlet property="searchBar" destination="QQN-zm-pVO" id="wmF-K1-iez"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
